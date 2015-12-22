@@ -28,6 +28,9 @@
 ;;overwrite the selected region after marking and yanking. ie cut and paste
 (delete-selection-mode 1)
 
+;;auto update buffer if changes are made to file.
+(global-auto-revert-mode t)
+
 ;;fucntion to save macros
 (defun save-macro (name)                  
     "save a macro. Take a name as argument
