@@ -4,6 +4,13 @@
 ;;implement colour coding
 (global-font-lock-mode t)
 
+;;turn off menu bar if in CLI
+(cond
+    ((eq window-system 'x)
+     (menu-bar-mode 1))
+    (t
+     (menu-bar-mode 0)))
+
 ;;stop annoying backup files
 (setq make-backup-files nil)
 
